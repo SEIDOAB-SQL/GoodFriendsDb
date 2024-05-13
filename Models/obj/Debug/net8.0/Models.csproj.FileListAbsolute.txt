@@ -13,3 +13,4 @@
 /Users/Martin/Development/Projects/SQL Databases Apr 2024/SQLDB_dotNET/GoodFriendsDb/Models/obj/Debug/net8.0/refint/Models.dll
 /Users/Martin/Development/Projects/SQL Databases Apr 2024/SQLDB_dotNET/GoodFriendsDb/Models/obj/Debug/net8.0/Models.pdb
 /Users/Martin/Development/Projects/SQL Databases Apr 2024/SQLDB_dotNET/GoodFriendsDb/Models/obj/Debug/net8.0/ref/Models.dll
+/Users/Martin/Development/Projects/SQL Databases Apr 2024/SQLDB_dotNET/GoodFriendsDb/Models/obj/Debug/net8.0/Models.sourcelink.json

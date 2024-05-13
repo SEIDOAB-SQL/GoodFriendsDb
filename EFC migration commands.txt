@@ -8,34 +8,34 @@ On macOS in the terminal, type below commands. After each migration you will get
 Use command depending on your database.
 
 SQLServer:
-dotnet ef migrations add initial_migration --context SqlServerDbContext --output-dir Migrations/SqlServerDbContext
+dotnet ef migrations add initial_migration --context SqlServerDbContext --output-dir Migrations/SqlServer
 
 MariaDb:
-dotnet ef migrations add initial_migration --context MySqlDbContext --output-dir Migrations/MySqlMigrations
+dotnet ef migrations add initial_migration --context MySqlDbContext --output-dir Migrations/MySql
 
 Postgres:
-dotnet ef migrations add initial_migration --context PostgresDbContext --output-dir Migrations/PostgresMigrations
+dotnet ef migrations add initial_migration --context PostgresDbContext --output-dir Migrations/Postgres
 
 SQLite:
-dotnet ef migrations add initial_migration --context SqliteDbContext --output-dir Migrations/SqliteMigrations
+dotnet ef migrations add initial_migration --context SqliteDbContext --output-dir Migrations/Sqlite
 
 
-Windows Database migrations.
+Visual Studion Windows Database migrations.
 ----------------------------------
 On Windows in the PCM terminal, type below commands. After each migration you will get a success confirmation from EFC.
 Use command depending on your database.
 
 SQLServer:
-add-migration initial_migration -context SqlServerDbContext -outputdir Migrations/SqlServerMigrations
+add-migration initial_migration -context SqlServerDbContext -outputdir Migrations/SqlServer
 
 MariaDb:
-add-migration initial_migration --context MySqlDbContext --outputdir Migrations/MySqlMigrations
+add-migration initial_migration --context MySqlDbContext --outputdir Migrations/MySqlDb
 
 Postgres:
-add-migration initial_migration --context PostgresDbContext --outputdir Migrations/PostgresMigrations
+add-migration initial_migration --context PostgresDbContext --outputdir Migrations/Postgres
 
 SQLite:
-add-migration initial_migration --context SqliteDbContext --outputdir Migrations/SqliteMigrations
+add-migration initial_migration --context SqliteDbContext --outputdir Migrations/Sqlite
 
 
 
@@ -55,7 +55,7 @@ SQLite:
 dotnet ef database update --context SqliteDbContext
 
 
-Windows Commit the migrations to the Database (create or update the databases).
+Visual Studion Windows Commit the migrations to the Database (create or update the databases).
 ----------------------------------------------------------------------------
 
 On Windows in the PCM terminal, type below commands. After each migration you will get a success confirmation
@@ -76,12 +76,12 @@ update-database -context SqliteDbContext
 macOS to remove latest migration, e.g. empty migration, that is NOT updated to Database
 ----------------------------------------------------------------------------
 
-dotnet ef migrations remove --context SqlServerDbContext
+dotnet ef migrations remove --context SqlServer
 
 
 macOS revert Database to a specific migration
 -------------------------------------------------
-dotnet ef database update <target_migration> --context SqlServerDbContext
+dotnet ef database update <target_migration> --context SqlServer
 
 example:
-dotnet ef database update fk_migration6 --context SqlServerDbContext
+dotnet ef database update fk_migration6 --context SqlServer

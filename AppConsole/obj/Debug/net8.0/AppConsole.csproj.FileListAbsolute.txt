@@ -171,3 +171,4 @@
 /Users/Martin/Development/Projects/SQL Databases Apr 2024/SQLDB_dotNET/GoodFriendsDb/AppConsole/obj/Debug/net8.0/AppConsole.pdb
 /Users/Martin/Development/Projects/SQL Databases Apr 2024/SQLDB_dotNET/GoodFriendsDb/AppConsole/obj/Debug/net8.0/AppConsole.genruntimeconfig.cache
 /Users/Martin/Development/Projects/SQL Databases Apr 2024/SQLDB_dotNET/GoodFriendsDb/AppConsole/obj/Debug/net8.0/ref/AppConsole.dll
+/Users/Martin/Development/Projects/SQL Databases Apr 2024/SQLDB_dotNET/GoodFriendsDb/AppConsole/obj/Debug/net8.0/AppConsole.sourcelink.json

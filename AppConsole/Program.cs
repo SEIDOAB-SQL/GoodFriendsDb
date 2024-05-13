@@ -24,7 +24,7 @@ namespace AppConsole
 
     class Program
     {
-        const int nrItemsSeed = 50;
+        const int nrItemsSeed = 1_000;
         static void Main(string[] args)
         {
             #region run below to test the model only
@@ -36,10 +36,12 @@ namespace AppConsole
             WriteModel(_modelList);
             #endregion
 
+
             #region  run below only when Database i created
-            Console.WriteLine($"\nConnecting to database...");
+            Console.WriteLine($"Database type: {csAppConfig.DbSetActive.DbLocation}");
             Console.WriteLine($"Database type: {csAppConfig.DbSetActive.DbServer}");
             Console.WriteLine($"Connection used: {csAppConfig.DbSetActive.DbConnection}");
+            Console.WriteLine($"Connection used: {csAppConfig.DbSetActive.DbConnectionString}");
   
             Console.WriteLine($"\nSeeding database...");
             try
@@ -56,8 +58,10 @@ namespace AppConsole
 
             Console.WriteLine("\nQuery database...");
             QueryDatabaseAsync().Wait();
+
+            MoreQueryDatabaseAsync().Wait();
             #endregion
-        }
+       }
 
 
         #region Replaced by new model methods
@@ -138,6 +142,37 @@ namespace AppConsole
                 #endregion
 
                 WriteModel(_modelList);
+            }
+        }
+
+
+        private static async Task MoreQueryDatabaseAsync()
+        {
+            Console.WriteLine("------More Query --------");
+            using (var db = csMainDbContext.DbContext())
+            {
+                var c = await db.Friends.Where(f => f.FirstName == "Harry"&& f.LastName == "Potter").CountAsync();
+                Console.WriteLine($"Harry Potter Count: {c}");
+
+                c = await db.Friends.Include(f => f.Adress).Where(f => f.Adress.Country == "Denmark").CountAsync();
+                Console.WriteLine($"Friends in Denmark: {c}");
+                
+
+                c = await db.Friends.Include(f => f.Adress).Where(f => f.Adress == null).CountAsync();
+                Console.WriteLine($"Friends without an adress: {c}");
+
+                c = await db.Friends.Where(f => f.Pets.Count == 0).CountAsync();
+                Console.WriteLine($"Friends without a pet: {c}");
+
+                var list = await db.Friends.ToListAsync();
+                Console.WriteLine($"Nr Friends: {list.Count}");
+
+                //friends grouped by country
+                var byCountry = await db.Friends.Include(f => f.Adress).GroupBy(f => f.Adress.Country).ToListAsync();
+                foreach (var item in byCountry)
+                {
+                    Console.WriteLine($"{item.Key}: {item.Count()}");
+                }
             }
         }
         #endregion

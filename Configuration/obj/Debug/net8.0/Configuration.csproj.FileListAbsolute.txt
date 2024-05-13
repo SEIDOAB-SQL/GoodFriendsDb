@@ -10,3 +10,4 @@
 /Users/Martin/Development/Projects/SQL Databases Apr 2024/SQLDB_dotNET/GoodFriendsDb/Configuration/obj/Debug/net8.0/refint/Configuration.dll
 /Users/Martin/Development/Projects/SQL Databases Apr 2024/SQLDB_dotNET/GoodFriendsDb/Configuration/obj/Debug/net8.0/Configuration.pdb
 /Users/Martin/Development/Projects/SQL Databases Apr 2024/SQLDB_dotNET/GoodFriendsDb/Configuration/obj/Debug/net8.0/ref/Configuration.dll
+/Users/Martin/Development/Projects/SQL Databases Apr 2024/SQLDB_dotNET/GoodFriendsDb/Configuration/obj/Debug/net8.0/Configuration.sourcelink.json

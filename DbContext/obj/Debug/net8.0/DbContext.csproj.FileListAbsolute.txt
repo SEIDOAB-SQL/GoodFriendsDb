@@ -17,3 +17,4 @@
 /Users/Martin/Development/Projects/SQL Databases Apr 2024/SQLDB_dotNET/GoodFriendsDb/DbContext/obj/Debug/net8.0/DbContext.pdb
 /Users/Martin/Development/Projects/SQL Databases Apr 2024/SQLDB_dotNET/GoodFriendsDb/DbContext/obj/Debug/net8.0/DbContext.genruntimeconfig.cache
 /Users/Martin/Development/Projects/SQL Databases Apr 2024/SQLDB_dotNET/GoodFriendsDb/DbContext/obj/Debug/net8.0/ref/DbContext.dll
+/Users/Martin/Development/Projects/SQL Databases Apr 2024/SQLDB_dotNET/GoodFriendsDb/DbContext/obj/Debug/net8.0/DbContext.sourcelink.json
