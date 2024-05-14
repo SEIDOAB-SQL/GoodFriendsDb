@@ -24,7 +24,7 @@ namespace AppConsole
 
     class Program
     {
-        const int nrItemsSeed = 1_000;
+        const int nrItemsSeed = 10;
         static void Main(string[] args)
         {
             #region run below to test the model only
