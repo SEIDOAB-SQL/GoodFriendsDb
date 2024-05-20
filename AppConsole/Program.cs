@@ -85,6 +85,8 @@ namespace AppConsole
             var _goodfriends = _seeder.ItemsToList<csFriend>(nrItems);
             var _adresses = _seeder.ItemsToList<csAdress>(nrItems);
 
+            var _quotes = _seeder.AllQuotes.Select (q => new csQuote() { Quote = q.Quote, Author = q.Author}).ToList(); 
+
             //Assign adress and pet to friends
             for (int i = 0; i < nrItems; i++)
             {
@@ -103,9 +105,8 @@ namespace AppConsole
                 _goodfriends[i].Quotes = new List<csQuote>();
                 for (int c = 0; c < _seeder.Next(0,6); c++)
                 {
-                    var _tmpquote = _seeder.Quote;
-                    var _quote = new csQuote(){ Quote = _tmpquote.Quote, Author = _tmpquote.Author };
-                    _goodfriends[i].Quotes.Add(_quote);
+                    var _q = _seeder.FromList(_quotes); 
+                    _goodfriends[i].Quotes.Add(_q);
                 }
             }
             return _goodfriends;
