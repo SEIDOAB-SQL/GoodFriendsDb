@@ -12,8 +12,8 @@ namespace Models
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
-
         public string Email { get; set; }
+        public DateTime? Birthday { get; set; }
 
         //Navigation props
         public csAdress Adress { get; set; } = null;    //null = no adress        
@@ -60,6 +60,7 @@ namespace Models
                 FirstName = fn,
                 LastName = ln,
                 Email = _seeder.Email(fn, ln),
+                Birthday = _seeder.Bool ?_seeder.DateAndTime(1950, 2020) : null,
 
                 Seeded = true
             };
