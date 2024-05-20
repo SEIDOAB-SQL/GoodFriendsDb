@@ -15,6 +15,7 @@ public class csMainDbContext : Microsoft.EntityFrameworkCore.DbContext
     public DbSet<csFriend> Friends { get; set; }
     public DbSet<csAdress> Adress { get; set; }
     public DbSet<csPet> Pets { get; set; }
+    public DbSet<csQuote> Quotes { get; set; }
     #endregion
 
     #region get right DBContext from DbSet configuration in Appsettings

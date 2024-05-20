@@ -98,6 +98,15 @@ namespace AppConsole
                     _pets.Add(new csPet().Seed(_seeder)); 
                 }
                 _goodfriends[i].Pets = (_pets.Count > 0) ? _pets : null;
+
+                //Quotes
+                _goodfriends[i].Quotes = new List<csQuote>();
+                for (int c = 0; c < _seeder.Next(0,6); c++)
+                {
+                    var _tmpquote = _seeder.Quote;
+                    var _quote = new csQuote(){ Quote = _tmpquote.Quote, Author = _tmpquote.Author };
+                    _goodfriends[i].Quotes.Add(_quote);
+                }
             }
             return _goodfriends;
         }

@@ -14,9 +14,13 @@ namespace Models
         public string LastName { get; set; }
 
         public string Email { get; set; }
+
+        //Navigation props
         public csAdress Adress { get; set; } = null;    //null = no adress        
 
         public List<csPet> Pets { get; set; } = null;      //null = no pets 
+
+        public List<csQuote> Quotes { get; set; } = null;
 
 
         public string FullName => $"{FirstName} {LastName}";
